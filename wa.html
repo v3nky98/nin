@@ -1,0 +1,68 @@
+<html>
+  <head>
+    
+  <title>Isha Foundation - Resources</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.5">
+  </head>
+  <body>
+    <script>
+      function checkMobile () {
+        var phone_number = document.ssm_info.phone.value;
+        
+        is_valid = phone_number && phone_number.length >= 13;
+                
+        if (is_valid) {    
+           document.ssm_info.action="https://api.whatsapp.com/send";
+           document.ssm_info.submit();
+        } else {
+           alert("Enter a valid WhatsApp #");
+        }
+      }
+      
+      
+    </script>
+
+    
+    <form name="ssm_info"  onSubmit="checkMobile()">
+      <b>Save Soil Movement - Resources v1.0.5</b>
+      <br/><br/>
+        Enter Mobile #<br/>
+        <input name="phone" value="+91"/><br/><br/>
+      
+        WhatsApp Message <br/>
+        <textarea name="text" rows="15" cols="40">
+Isha Foundation - Quick Links
+
+Yoga & Meditation 
+https://isha.sadhguru.org/us/en/yoga-meditation
+
+Programs for Beginners
+https://isha.sadhguru.org/us/en/yoga-meditation/yoga-program-for-beginners
+
+Inner Engineering 
+https://www.innerengineering.com/
+
+Save Soil
+https://savesoil.org
+          
+Centre details
+https://isha.sadhguru.org/us/en/center
+
+Sadhguru App
+https://isha.sadhguru.org/in/en/sadhguru-app
+
+Isha life
+https://www.ishalife.com/
+
+Contact
+Telephone: 83000 83111, 0422 4283111, 0422 3583111
+Email:  info@ishafoundation.org
+
+#SaveSoil, Let's make it happen
+</textarea><br/><br/>
+         <input type="submit" value="Send to WhatsApp #"/>
+    </form>
+    
+  </body>
+</html>
